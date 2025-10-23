@@ -1,10 +1,10 @@
-// Інтерфейс Planet
+
 interface Planet {
-    void ReportAboutMovement(); // повідомляє, навколо чого рухається
-    void ReportAboutLife();     // повідомляє про наявність життя
+    void ReportAboutMovement(); 
+    void ReportAboutLife();     
 }
 
-// Клас Earth, який реалізує Planet
+
 class Earth implements Planet {
     @Override
     public void ReportAboutMovement() {
@@ -17,7 +17,7 @@ class Earth implements Planet {
     }
 }
 
-// Клас Moon, який реалізує Planet
+
 class Moon implements Planet {
     @Override
     public void ReportAboutMovement() {
@@ -30,14 +30,14 @@ class Moon implements Planet {
     }
 }
 
-// Головний клас програми
+
 public class Main {
     public static void main(String[] args) {
-        // Використовуємо поліморфізм — змінні типу Planet
+
         Planet earth = new Earth();
         Planet moon = new Moon();
 
-        // Викликаємо методи (поліморфізм у дії)
+
         System.out.println("Інформація про планети:\n");
 
         earth.ReportAboutMovement();
@@ -48,4 +48,5 @@ public class Main {
         moon.ReportAboutMovement();
         moon.ReportAboutLife();
     }
+
 }
